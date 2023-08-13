@@ -243,7 +243,7 @@ body{
         z-index: 5;
     }
 
-    .contentButtons button{
+    .contentButtons span{
         outline: none;
         border: none;
         background:#222222;
@@ -278,7 +278,7 @@ body{
         z-index: 5;
     }
 
-    .contentButtons button{
+    .contentButtons span{
         outline: none;
         border: none;
         background:#222222;
