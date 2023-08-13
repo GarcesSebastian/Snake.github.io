@@ -197,10 +197,10 @@ function createPoint(){
 
 createPoint();
 
-let Up = document.querySelector("spanUp");
-let Down = document.querySelector("spanDown");
-let Left = document.querySelector("spanLeft");
-let Right = document.querySelector("spanRight");
+let Up = document.querySelector("Up");
+let Down = document.querySelector("Down");
+let Left = document.querySelector("Left");
+let Right = document.querySelector("Right");
 
 Up.addEventListener("click", () => {
 
