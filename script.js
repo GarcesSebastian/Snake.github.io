@@ -197,29 +197,30 @@ function createPoint(){
 
 createPoint();
 
-let Up = document.querySelector("Up");
-let Down = document.querySelector("Down");
-let Left = document.querySelector("Left");
-let Right = document.querySelector("Right");
+let Up = document.querySelector(".Up");
+let Down = document.querySelector(".Down");
+let Left = document.querySelector(".Left");
+let Right = document.querySelector(".Right");
 
-Up.addEventListener("click", () => {
-
- flagKeyW = true;
+Up.addEventListener("click", () =>{
+    if(flagKeyW == true){
+        flagKeyW = true;
         flagKeyA = true;
         flagKeyD = true;
         flagKeyS = false;
-
+    
         flagW = true;
         flagA = false;
         flagS = false;
-        flagD = false;    
-
+        flagD = false;
+    }
 });
 
 
 Down.addEventListener("click", () => {
 
- flagKeyW = false;
+    if(flagKeyS == true){
+        flagKeyW = false;
         flagKeyA = true;
         flagKeyD = true;
         flagKeyS = true;
@@ -228,12 +229,15 @@ Down.addEventListener("click", () => {
         flagA = false;
         flagS = true;
         flagD = false;
-}):
+    }
+
+});
 
 
 Left.addEventListener("click", () => {
 
- flagKeyW = true;
+    if(flagKeyA == true){
+        flagKeyW = true;
         flagKeyA = true;
         flagKeyD = false;
         flagKeyS = true;
@@ -242,12 +246,14 @@ Left.addEventListener("click", () => {
         flagA = true;
         flagS = false;
         flagD = false;
+    }
 
 });
 
 Right.addEventListener("click", () => {
 
- flagKeyW = true;
+    if(flagKeyD == true){
+        flagKeyW = true;
         flagKeyA = false;
         flagKeyD = true;
         flagKeyS = true;
@@ -256,6 +262,7 @@ Right.addEventListener("click", () => {
         flagA = false;
         flagS = false;
         flagD = true;
+    }
 
 });
 
@@ -397,4 +404,3 @@ function updateSnakePosition() {
 }
 
 checkMovement = setInterval(updateSnakePosition, 15);
-

@@ -27,29 +27,9 @@ body{
     top:0;
 }
 
+
 .contentButtons{
-
-    width:100%;
-    height:fit-content;
-    display:flex;
-    aling-items: center;
-    justify-content: center;
-    border:1px solid White;
-    position:absoluta;
-    bottom:0px;
-
-}
-
-.contentButtons span{
-   background:#222222;
-   width: fit-content;
-   height: fit-content;
-   padding:2%;
-   display:flex;
-   aling-items: center;
-   justify-content: center;
-   color:White;
-   border-radius:3px;
+    display: none;
 }
 
 .point{
@@ -164,6 +144,48 @@ body{
 
 @media (max-width: 540px) {
     
+    .contentButtons{
+        width:30%;
+        height:20%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position:absolute;
+        bottom:10%;
+        right: 5%;
+        z-index: 2;
+    }
+    
+    .contentButtons div{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    
+    
+    .contentButtons span{
+       background:#222222;
+       width: 20%;
+       height: 100%;
+       display:flex;
+       align-items: center;
+       justify-content: center;
+       color:White;
+       cursor: pointer;
+       border-radius: 100%;
+       font-size: 12px;
+    }
+    
+    .contentButtons span:hover{
+        background-color: rgb(34, 34, 34, .8);
+    }
+    
+
     .point{
         width: 15px;
         height: 15px;    
@@ -176,8 +198,21 @@ body{
 
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
     
+    .contentButtons{
+        width:50%;
+        height:20%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position:absolute;
+        bottom:10%;
+        right: -2%;
+        z-index: 2;
+    }
+
     .point{
         width: 12px;
         height: 12px;    
@@ -187,5 +222,36 @@ body{
         width: 12px;
         height: 12px;    
     }
+
+}
+
+@media (max-width: 300px) {
+    
+    .contentButtons{
+        width:60%;
+        height:18%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position:absolute;
+        bottom:7%;
+        right: -2%;
+        z-index: 2;
+    }
+
+    .contentButtons span{
+        background:#222222;
+        width: 20%;
+        height: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        color:White;
+        cursor: pointer;
+        border-radius: 100%;
+        font-size: 10px;
+     }
+
 
 }
