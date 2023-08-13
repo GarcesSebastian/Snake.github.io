@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+
+body{
+    height: 100vh;
+    background-color: #dbd7d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.containerView{
+    height: 100%;
+    width: 100%;
+    background-color: #0c0c0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+}
+
+
+.point{
+    background-color: blue;
+    width: 1.5%;
+    height: 4%;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px blue,0px 0px 5px blue;
+}
+
+.element{
+    background-color: rgb(10, 193, 50);
+    position: absolute;
+    width: 1.5%;
+    height: 4%;
+    padding: 0 .1%;
+    z-index: 2;
+    margin: 0;
+    /* animation: move 20s ease infinite ; */
+}
+
+.element:nth-child(2){
+    position: absolute;
+    top: 51.8%;/*3*/
+    /* animation: move 20s ease infinite ; */
+}
+
+.element:first-child{
+    position: absolute;
+    top: 48.2%;
+    z-index: 3; 
+    /* animation: move 20s ease infinite ; */
+}
+
+.element:first-child::after{
+    content: '';
+    width: 30%;
+    height: 30%;
+    background-color: #0c0c0c;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border-radius: 100%;
+}
+
+.element:first-child::before{
+    content: '';
+    width: 30%;
+    height: 30%;
+    background-color: #0c0c0c;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    border-radius: 100%;
+}
+
+.content{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 4;
+}
+
+.content h2{
+    color: white;
+    font-family: sans-serif;
+    font-size: clamp(10px, 1.3vw, 49px);
+}
+
+.content strong{
+    color: lime;
+    font-family: sans-serif;
+    font-size: clamp(10px, 1.3vw, 49px);
+}
+
+
+@media (max-width: 1000px) {
+    
+    .point{
+        width: 18px;
+        height: 18px;    
+    }
+
+    .element{
+        width: 18px;
+        height: 18px;    
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    
+    .point{
+        width: 16px;
+        height: 16px;    
+    }
+
+    .element{
+        width: 16px;
+        height: 16px;    
+    }
+
+}
+
+@media (max-width: 540px) {
+    
+    .point{
+        width: 15px;
+        height: 15px;    
+    }
+
+    .element{
+        width: 15px;
+        height: 15px;    
+    }
+
+}
+
+@media (max-width: 360px) {
+    
+    .point{
+        width: 12px;
+        height: 12px;    
+    }
+
+    .element{
+        width: 12px;
+        height: 12px;    
+    }
+
+}
