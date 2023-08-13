@@ -27,6 +27,30 @@ body{
     top:0;
 }
 
+.contentButtons{
+
+    width:100%;
+    height:fit-content;
+    display:flex;
+    aling-items: center;
+    justify-content: center;
+    border:1px solid White;
+    position:absoluta;
+    bottom:0px;
+
+}
+
+.contentButtons span{
+   background:#222222;
+   width: fit-content;
+   height: fit-content;
+   padding:2%;
+   display:flex;
+   aling-items: center;
+   justify-content: center;
+   color:White;
+   border-radius:3px;
+}
 
 .point{
     background-color: blue;
