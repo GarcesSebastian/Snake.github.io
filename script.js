@@ -197,7 +197,67 @@ function createPoint(){
 
 createPoint();
 
+let Up = document.querySelector("spanUp");
+let Down = document.querySelector("spanDown");
+let Left = document.querySelector("spanLeft");
+let Right = document.querySelector("spanRight");
 
+Up.addEventListener("click", () => {
+
+ flagKeyW = true;
+        flagKeyA = true;
+        flagKeyD = true;
+        flagKeyS = false;
+
+        flagW = true;
+        flagA = false;
+        flagS = false;
+        flagD = false;    
+
+});
+
+
+Down.addEventListener("click", () => {
+
+ flagKeyW = false;
+        flagKeyA = true;
+        flagKeyD = true;
+        flagKeyS = true;
+
+        flagW = false;
+        flagA = false;
+        flagS = true;
+        flagD = false;
+}):
+
+
+Left.addEventListener("click", () => {
+
+ flagKeyW = true;
+        flagKeyA = true;
+        flagKeyD = false;
+        flagKeyS = true;
+
+        flagW = false;
+        flagA = true;
+        flagS = false;
+        flagD = false;
+
+});
+
+Right.addEventListener("click", () => {
+
+ flagKeyW = true;
+        flagKeyA = false;
+        flagKeyD = true;
+        flagKeyS = true;
+
+        flagW = false;
+        flagA = false;
+        flagS = false;
+        flagD = true;
+
+});
 
 function move(event) {
     if ((event.key === "w" || event.key === "W") && flagKeyW == true) {
