@@ -175,31 +175,9 @@ function createPoint(){
     let leftContent = parseFloat(content.offsetLeft);
     let topContent = parseFloat(content.offsetTop);
 
-    if(parseFloat(window.innerWidth) > 540){
-        while(flagPointSpawn == false){
-            posPointY = Math.floor(Math.random() * ((heightContent - topContent - 20) - topContent - 20 + 1) + topContent - 20);
-            posPointX = Math.floor(Math.random() * ((widthContent - leftContent - 20) - leftContent - 20 + 1) + leftContent - 20);
+    posPointY = Math.floor(Math.random() * (((heightContent - 40) - (topContent + 40) ) - topContent  + 1) + topContent );
+    posPointX = Math.floor(Math.random() * (((widthContent - 40) - (leftContent + 40) ) - leftContent  + 1) + leftContent ); 
     
-            if(posPointX % 20 === 0 && posPointY % 20 === 0){
-                flagPointSpawn = true;
-            }else{
-                flagPointSpawn = false;
-            }
-    
-        }
-    }else if(parseFloat(window.innerWidth) <= 540){
-        while(flagPointSpawn == false){
-            posPointY = Math.floor(Math.random() * ((heightContent - topContent - 60) - topContent - 60 + 1) + topContent - 60);
-            posPointX = Math.floor(Math.random() * ((widthContent - leftContent - 60) - leftContent - 60 + 1) + leftContent - 60);
-    
-            if(posPointX % 20 === 0 && posPointY % 20 === 0){
-                flagPointSpawn = true;
-            }else{
-                flagPointSpawn = false;
-            }
-    
-        }
-    }
     
     const point = document.createElement('div');
     point.className = "point";
